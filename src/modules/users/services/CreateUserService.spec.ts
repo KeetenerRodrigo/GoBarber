@@ -28,14 +28,14 @@ describe('CreateUser', () => {
     const createUser = new CreateUserService(fakeUserRepository, fakeHashProvider);
 
     await createUser.execute({
-      email: 'teste@gmail.com',
+      email: 'teste1@gmail.com',
       name: 'keetener',
       password: '12345678'
     })
 
     expect(
-      await createUser.execute({
-        email: 'teste@gmail.com',
+      createUser.execute({
+        email: 'teste1@gmail.com',
         name: 'keetener',
         password: '12345678'
       })
