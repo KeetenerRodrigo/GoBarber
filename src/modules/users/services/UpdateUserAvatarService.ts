@@ -6,7 +6,7 @@ import uploadConfig from '@config/upload';
 import User from '@modules/users/infra/typeorm/entities/User';
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import { inject, injectable } from 'tsyringe';
-import IStorageProvider from '@shared/container/providers/StorageProviders/models/IStorageProviders';
+import IStorageProvider from '@shared/container/providers/StorageProvider/models/IStorageProviders';
 
 interface Request {
   user_id: string;
