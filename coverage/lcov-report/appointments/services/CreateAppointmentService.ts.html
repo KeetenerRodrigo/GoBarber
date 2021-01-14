@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">92.45% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>49/53</span>
+                <span class='fraction'>0/53</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">77.78% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>7/9</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">92.45% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>49/53</span>
+                <span class='fraction'>0/53</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -110,112 +110,112 @@
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
 <a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">7x</span>
+<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { getHours, isBefore, startOfHour } from 'date-fns';
-import Appointment from '@modules/appointments/infra/typeorm/entities/Appointment';
-import AppError from '@shared/errors/AppError';
-import ICreateAppointmentsDTO from '@modules/appointments/dtos/ICreateAppointmentsDTO';
-import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';
-import { inject, injectable } from 'tsyringe';
-import profileRouter from '@modules/users/infra/http/routes/profile.routes';
-&nbsp;
-@injectable()
-class CreateAppointmentService {
-  constructor(
-    @inject('AppointmentsRepository')
-    private appointmentsRepository: IAppointmentsRepository,
-  ) { }
-&nbsp;
-  public async execute({
-    date,
-    providerId,
-    user_id
-  }: ICreateAppointmentsDTO): Promise&lt;Appointment&gt; {
-    const appointmentDate = startOfHour(date);
-&nbsp;
-    if(isBefore(appointmentDate, Date.now())){
-      throw new AppError("You can't create an a appointment on a past date.", 400);
-    }
-&nbsp;
-    if(user_id === providerId) {
-      throw new AppError("You can't create an a appointment with yourself.", 400);
-    }
-&nbsp;
-   if(getHours(appointmentDate) &lt; 8 || getHours(appointmentDate) &gt; 17) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import { getHours, isBefore, startOfHour } from 'date-fns';</span></span></span>
+<span class="cstat-no" title="statement not covered" >import Appointment from '@modules/appointments/infra/typeorm/entities/Appointment';</span>
+<span class="cstat-no" title="statement not covered" >import AppError from '@shared/errors/AppError';</span>
+<span class="cstat-no" title="statement not covered" >import ICreateAppointmentsDTO from '@modules/appointments/dtos/ICreateAppointmentsDTO';</span>
+<span class="cstat-no" title="statement not covered" >import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';</span>
+<span class="cstat-no" title="statement not covered" >import { inject, injectable } from 'tsyringe';</span>
+<span class="cstat-no" title="statement not covered" >import profileRouter from '@modules/users/infra/http/routes/profile.routes';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >@injectable()</span>
+<span class="cstat-no" title="statement not covered" >class CreateAppointmentService {</span>
+<span class="cstat-no" title="statement not covered" >  constructor(</span>
+<span class="cstat-no" title="statement not covered" >    @inject('AppointmentsRepository')</span>
+<span class="cstat-no" title="statement not covered" >    private appointmentsRepository: IAppointmentsRepository,</span>
+<span class="cstat-no" title="statement not covered" >  ) { }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  public async execute({</span>
+<span class="cstat-no" title="statement not covered" >    date,</span>
+<span class="cstat-no" title="statement not covered" >    providerId,</span>
+<span class="cstat-no" title="statement not covered" >    user_id</span>
+<span class="cstat-no" title="statement not covered" >  }: ICreateAppointmentsDTO): Promise&lt;Appointment&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    const appointmentDate = startOfHour(date);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if(isBefore(appointmentDate, Date.now())){</span>
+<span class="cstat-no" title="statement not covered" >      throw new AppError("You can't create an a appointment on a past date.", 400);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if(user_id === providerId) {</span>
+<span class="cstat-no" title="statement not covered" >      throw new AppError("You can't create an a appointment with yourself.", 400);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >   if(getHours(appointmentDate) &lt; 8 || getHours(appointmentDate) &gt; 17) {</span>
 <span class="cstat-no" title="statement not covered" >    throw new AppError("You can only create appointments between 8am and 5pm", 400);</span>
 <span class="cstat-no" title="statement not covered" >   }</span>
-&nbsp;
-    const findAppointmentInSameDate = await this.appointmentsRepository.findByDate(
-      appointmentDate,
-    );
-&nbsp;
-    if (findAppointmentInSameDate) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    const findAppointmentInSameDate = await this.appointmentsRepository.findByDate(</span>
+<span class="cstat-no" title="statement not covered" >      appointmentDate,</span>
+<span class="cstat-no" title="statement not covered" >    );</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (findAppointmentInSameDate) {</span>
 <span class="cstat-no" title="statement not covered" >      throw new AppError('This appointment is already booked', 400);</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
-&nbsp;
-    const appointment = await this.appointmentsRepository.create({
-      providerId,
-      user_id,
-      date: appointmentDate,
-    });
-&nbsp;
-    return appointment;
-  }
-}
-&nbsp;
-export default CreateAppointmentService;
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    const appointment = await this.appointmentsRepository.create({</span>
+<span class="cstat-no" title="statement not covered" >      providerId,</span>
+<span class="cstat-no" title="statement not covered" >      user_id,</span>
+<span class="cstat-no" title="statement not covered" >      date: appointmentDate,</span>
+<span class="cstat-no" title="statement not covered" >    });</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return appointment;</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >}</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >export default CreateAppointmentService;</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -223,7 +223,7 @@ export default CreateAppointmentService;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Jan 14 2021 16:40:11 GMT-0300 (GMT-03:00)
+                at Thu Jan 14 2021 17:15:17 GMT-0300 (GMT-03:00)
             </div>
         </div>
         <script src="../../prettify.js"></script>
